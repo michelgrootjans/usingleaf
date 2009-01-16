@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Iconos.Utilities")]
+[assembly: AssemblyTitle("Timesheet.Domain.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Home")]
-[assembly: AssemblyProduct("Iconos.Utilities")]
-[assembly: AssemblyCopyright("Copyright © Home 2009")]
+[assembly: AssemblyCompany("4C")]
+[assembly: AssemblyProduct("Timesheet.Domain.Test")]
+[assembly: AssemblyCopyright("Copyright © 4C 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dc96fc92-ae59-400c-92d9-ecad0f5da577")]
+[assembly: Guid("2153c42a-8dc3-4f7f-928a-ed512d93f2ee")]
 
 // Version information for an assembly consists of the following four values:
 //
