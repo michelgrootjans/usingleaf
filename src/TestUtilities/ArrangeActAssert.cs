@@ -23,9 +23,9 @@ namespace TestUtilities
             OnTearDown();
         }
 
-        protected virtual void Arrange() { }
+        public virtual void Arrange() { }
         protected virtual void SetupSUT() { }
-        protected virtual void Act() { }
+        public virtual void Act() { }
         public virtual void OnTearDown() { }
 
         protected S RegisterDependencyInContainer<S>() where S : class
@@ -50,7 +50,7 @@ namespace TestUtilities
             sut = CreateSUT();
         }
 
-        protected virtual T CreateSUT()
+        public virtual T CreateSUT()
         {
             return default(T);
         }
