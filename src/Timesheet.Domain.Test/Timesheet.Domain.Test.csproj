@@ -31,6 +31,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Leaf, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.BL, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.Dal, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.Dal.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.Dal.Common, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.Dal.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.Dal.DBLayer.SqlServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.Dal.DBLayer.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.Encryption, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Leaf.Localization.ResourceMessages, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db05ae5fc140f880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Leaf.Localization.ResourceMessages.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\tools\NUnit\nunit.framework.dll</HintPath>
@@ -51,9 +79,24 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Timesheet.BL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Timesheet.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="Timesheet.DAL, Version=1.0.3303.20560, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Timesheet.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Timesheet.Resource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\leaf\Timesheet.Resource.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\PersonPresenterTests.cs" />
+    <Compile Include="Presentation\PredicateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PersonServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestUtilities\TestUtilities.csproj">
@@ -68,6 +111,14 @@
       <Project>{5F62AE4D-9638-4EDE-A29E-C50830C1E3E9}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Timesheet.UI\App.config">
+      <Link>App.config</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
