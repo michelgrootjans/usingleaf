@@ -47,6 +47,20 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestUtilities\TestUtilities.csproj">
+      <Project>{629423F0-D2D1-4A9F-8A9B-38515DE63C00}</Project>
+      <Name>TestUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Timesheet.Domain\Timesheet.Domain.csproj">
+      <Project>{7A2E3C85-8DF8-49DB-9269-4EE290CCC51E}</Project>
+      <Name>Timesheet.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{5F62AE4D-9638-4EDE-A29E-C50830C1E3E9}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
