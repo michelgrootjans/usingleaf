@@ -3,13 +3,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{84920B39-8C50-45FB-89B7-1FA00DD850E5}</ProjectGuid>
+    <ProjectGuid>{629423F0-D2D1-4A9F-8A9B-38515DE63C00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Timesheet.Services</RootNamespace>
-    <AssemblyName>Timesheet.Services</AssemblyName>
+    <RootNamespace>TestUtilities</RootNamespace>
+    <AssemblyName>TestUtilities</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
