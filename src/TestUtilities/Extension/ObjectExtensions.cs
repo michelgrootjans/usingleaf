@@ -18,5 +18,10 @@ namespace TestUtilities.Extension
         {
             Assert.AreSame(expected, actual);
         }
+
+        public static void ShouldBeEqualTo(this object expected, object actual)
+        {
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

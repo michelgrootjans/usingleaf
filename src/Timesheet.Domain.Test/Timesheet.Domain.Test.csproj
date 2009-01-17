@@ -93,8 +93,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation\PersonPresenterTests.cs" />
+    <Compile Include="Presentation\ListPersonPresenterTests.cs" />
     <Compile Include="Presentation\PredicateTest.cs" />
+    <Compile Include="Presentation\ViewPersonPresenterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PersonServiceTests.cs" />
   </ItemGroup>

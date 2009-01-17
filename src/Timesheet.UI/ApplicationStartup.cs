@@ -16,12 +16,31 @@ namespace Timesheet.UI
             ObjectFactory.Initialize
                 ( f =>
                       {
-                          f.ForRequestedType<IPersonService>()
-                           .TheDefaultIsConcreteType<PersonService>();
-                          f.ForRequestedType<IPresenter<IListPersonView>>()
-                              .TheDefaultIsConcreteType<ListPersonPresenter>();
+                          InitializePerson(f);
+                          InitializeSomethingElse(f);
                       }
                 );
+        }
+
+        private static void InitializePerson(IInitializationExpression f)
+        {
+            f.ForRequestedType<IListPersonView>()
+                .TheDefaultIsConcreteType<ListPersonView>();
+            f.ForRequestedType<IPresenter<IListPersonView>>()
+                .TheDefaultIsConcreteType<ListPersonPresenter>();
+
+            f.ForRequestedType<IViewPersonView>()
+                .TheDefaultIsConcreteType<PersonView>();
+            f.ForRequestedType<IPresenter<IViewPersonView>>()
+                .TheDefaultIsConcreteType<ViewPersonPresenter>();
+
+            f.ForRequestedType<IPersonService>()
+                .TheDefaultIsConcreteType<PersonService>();
+        }
+
+        private static void InitializeSomethingElse(IInitializationExpression f)
+        {
+            
         }
     }
 }

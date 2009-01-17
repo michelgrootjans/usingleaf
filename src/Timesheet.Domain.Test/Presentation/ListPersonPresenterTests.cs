@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using NUnit.Framework;
 using Rhino.Mocks;
 using TestUtilities;
+using TestUtilities.Extension;
 using Timesheet.BL;
 using Timesheet.Domain.Presentation;
 using Utilities.Presentation;
@@ -86,6 +87,41 @@ namespace Timesheet.Domain.Test.Presentation
         private Expression<Predicate<IEnumerable<Person>>> HasNoElements()
         {
             return l => l.ToList().Count == 0;
+        }
+    }
+
+    [TestFixture]
+    public class when_ListPersonPresenter_is_told_to_show_one_person : ArrangeActAssert<IPresenter<IListPersonView>>
+    {
+        private IPersonService service;
+        private IListPersonView view;
+        private IViewPersonView viewPersonView;
+        private Person person;
+
+        public override void Arrange()
+        {
+            service = Dependency<IPersonService>();
+            view = Dependency<IListPersonView>();
+            viewPersonView = RegisterDependencyInContainer<IViewPersonView>();
+            person = new Person(null);
+
+            view.Stub(v => v.GetSelectedPerson()).Return(person);
+        }
+
+        public override IPresenter<IListPersonView> CreateSUT()
+        {
+            return new ListPersonPresenter(service) { View = view };
+        }
+
+        public override void Act()
+        {
+            view.Raise(v => v.ShowSelectedPerson += null, view, EventArgs.Empty);
+        }
+
+        [Test]
+        public void should_set_the_person_into_the_ViewPersonView()
+        {
+            viewPersonView.AssertWasCalled(v => v.SetPerson(person));
         }
     }
 }
