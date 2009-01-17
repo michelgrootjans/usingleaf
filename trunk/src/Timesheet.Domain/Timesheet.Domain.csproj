@@ -85,14 +85,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IListPersonView.cs" />
-    <Compile Include="IPerson.cs" />
-    <Compile Include="IPersonService.cs" />
-    <Compile Include="IPresenter.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="ListPersonPresenter.cs" />
-    <Compile Include="PersonService.cs" />
-    <Compile Include="PresenterFactory.cs" />
+    <Compile Include="Presentation\IListPersonView.cs" />
+    <Compile Include="Presentation\IPersonService.cs" />
+    <Compile Include="Presentation\ListPersonPresenter.cs" />
+    <Compile Include="Services\PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

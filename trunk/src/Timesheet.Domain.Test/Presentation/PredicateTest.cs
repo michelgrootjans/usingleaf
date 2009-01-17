@@ -8,20 +8,26 @@ namespace Timesheet.Domain.Test.Presentation
     public class PredicateTest
     {
         [Test]
-        public void lmkqsjdfmlkjqsdf()
+        public void test_predicate_and_action()
         {
             var animals = GetAnimals();
             Predicate<Animal> animalsStartingWithL = a => a.Name.StartsWith("L");
             Action<Animal> printAnimal = a => Console.WriteLine(a);
 
+            Console.WriteLine("All animals:");
+            animals.ForEach(printAnimal);
+            Console.WriteLine();
+            Console.WriteLine("Animals starting with an L:");
             animals.FindAll(animalsStartingWithL).ForEach(printAnimal);
         }
 
         private List<Animal> GetAnimals()
         {
-            var animals = new List<Animal>();
-            animals.Add(new Animal("Lassie"));
-            animals.Add(new Animal("Kermit"));
+            var animals = new List<Animal>
+                              {
+                                  new Animal("Lassie"),
+                                  new Animal("Kermit")
+                              };
             return animals;
         }
     }

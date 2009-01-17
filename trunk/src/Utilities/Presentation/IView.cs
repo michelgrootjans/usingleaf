@@ -1,4 +1,4 @@
-namespace Timesheet.Domain
+namespace Utilities.Presentation
 {
     public interface IView
     {

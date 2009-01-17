@@ -6,12 +6,14 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2BECFBD8-767C-48C0-AFB9-60359020FDAB}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Timesheet.UI</RootNamespace>
     <AssemblyName>Timesheet.UI</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +41,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\leaf\Leaf.BL.dll</HintPath>
     </Reference>
+    <Reference Include="StructureMap, Version=2.5.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\structuremap\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -60,14 +66,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ApplicationStartup.cs" />
+    <Compile Include="ListPersonView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ListPersonView.Designer.cs">
+      <DependentUpon>ListPersonView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ListPersonView.resx">
+      <DependentUpon>ListPersonView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +99,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Utilities.Structuremap\Utilities.Structuremap.csproj">
+      <Project>{1BBA9104-F1D6-424F-8003-85103035EEF4}</Project>
+      <Name>Utilities.Structuremap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Timesheet.Domain.Test\Timesheet.Domain.Test.csproj">
+      <Project>{9F57B49F-0769-491B-8F83-58D1174A9A59}</Project>
+      <Name>Timesheet.Domain.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Timesheet.Domain\Timesheet.Domain.csproj">
       <Project>{7A2E3C85-8DF8-49DB-9269-4EE290CCC51E}</Project>
       <Name>Timesheet.Domain</Name>

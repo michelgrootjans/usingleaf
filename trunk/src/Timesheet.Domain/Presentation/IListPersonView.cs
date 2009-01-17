@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using Timesheet.BL;
+using Utilities.Presentation;
 
-namespace Timesheet.Domain
+namespace Timesheet.Domain.Presentation
 {
     public interface IListPersonView : IView
     {
         event EventHandler GiveMeAllPersons;
 
-        void SetPersons(IEnumerable<Person> persons);
+        IEnumerable<Person> Persons { set; }
     }
 }
