@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using Timesheet.Domain.Presentation;
+using Utilities.Presentation;
 
 namespace Timesheet.UI
 {
@@ -14,8 +16,11 @@ namespace Timesheet.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ApplicationStartup.Run();
+            
+            var listPersonView = new ListPersonView();
+            GetPresenter.For<IListPersonView>(listPersonView);
 
-            Application.Run(new ListPersonView());
+            Application.Run(listPersonView);
         }
     }
 }
