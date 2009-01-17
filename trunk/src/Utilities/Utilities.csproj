@@ -49,6 +49,7 @@
     <Compile Include="Containers\DictionaryContainer.cs" />
     <Compile Include="Containers\IContainer.cs" />
     <Compile Include="Containers\UnsatisfiedDependencyException.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Presentation\GetPresenter.cs" />
     <Compile Include="Presentation\IPresenter.cs" />

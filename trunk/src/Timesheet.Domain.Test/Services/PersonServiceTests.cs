@@ -13,10 +13,6 @@ namespace Timesheet.Domain.Test.Services
     {
         private IEnumerable<Person> persons;
 
-        public override void Arrange()
-        {
-        }
-
         public override IPersonService CreateSUT()
         {
             return new PersonService();
@@ -39,4 +35,5 @@ namespace Timesheet.Domain.Test.Services
             persons.ShouldNotBeNull();
         }
     }
+
 }

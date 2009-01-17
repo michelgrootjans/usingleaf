@@ -1,6 +1,9 @@
-﻿namespace Timesheet.UI
+﻿using Timesheet.BL;
+using Timesheet.Domain.Presentation;
+
+namespace Timesheet.UI
 {
-    partial class PersonView
+    partial class PersonView : IViewPersonView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +31,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtName.Location = new System.Drawing.Point(96, 24);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 0;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(96, 50);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.TabIndex = 1;
             // 
             // PersonView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 77);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(292, 240);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtName);
             this.Name = "PersonView";
             this.Text = "PersonView";
             this.ResumeLayout(false);
@@ -53,6 +65,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtFirstName;
     }
 }

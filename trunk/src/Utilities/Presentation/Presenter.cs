@@ -3,7 +3,8 @@ using Utilities.Extensions;
 
 namespace Utilities.Presentation
 {
-    public abstract class Presenter<T> : IPresenter<T> where T : IView
+    public abstract class Presenter<T> : IPresenter<T> 
+        where T : IView
     {
         private T view;
 
@@ -21,5 +22,6 @@ namespace Utilities.Presentation
         }
 
         protected abstract void WireUpView();
+        public abstract void Dispose();
     }
 }
