@@ -50,11 +50,11 @@
             // btnGetAllPeople
             // 
             this.btnGetAllPeople.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetAllPeople.Location = new System.Drawing.Point(814, 676);
+            this.btnGetAllPeople.Location = new System.Drawing.Point(801, 676);
             this.btnGetAllPeople.Name = "btnGetAllPeople";
-            this.btnGetAllPeople.Size = new System.Drawing.Size(75, 23);
+            this.btnGetAllPeople.Size = new System.Drawing.Size(88, 23);
             this.btnGetAllPeople.TabIndex = 1;
-            this.btnGetAllPeople.Text = "button1";
+            this.btnGetAllPeople.Text = "Get All People";
             this.btnGetAllPeople.UseVisualStyleBackColor = true;
             this.btnGetAllPeople.Click += new System.EventHandler(this.btnGetAllPeople_Click);
             // 
