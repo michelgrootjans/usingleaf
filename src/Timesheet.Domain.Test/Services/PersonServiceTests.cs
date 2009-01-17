@@ -3,7 +3,8 @@ using NUnit.Framework;
 using TestUtilities;
 using TestUtilities.Extension;
 using Timesheet.BL;
-using Timesheet.Domain.Test.Presentation;
+using Timesheet.Domain.Presentation;
+using Timesheet.Domain.Services;
 
 namespace Timesheet.Domain.Test.Services
 {
@@ -37,7 +38,5 @@ namespace Timesheet.Domain.Test.Services
         {
             persons.ShouldNotBeNull();
         }
-
     }
-
 }

@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using NUnit.Framework;
-using TestUtilities;
 using Rhino.Mocks;
+using TestUtilities;
 using Timesheet.BL;
-using System.Linq;
+using Timesheet.Domain.Presentation;
+using Utilities.Presentation;
 
 namespace Timesheet.Domain.Test.Presentation
 {
@@ -27,7 +29,7 @@ namespace Timesheet.Domain.Test.Presentation
 
         public override IPresenter<IListPersonView> CreateSUT()
         {
-            return new ListPersonPresenter(view, service);
+            return new ListPersonPresenter(service) {View = view};
         }
 
         public override void Act()
@@ -44,11 +46,13 @@ namespace Timesheet.Domain.Test.Presentation
         [Test]
         public void should_set_the_users_in_the_view()
         {
-            view.AssertWasCalled(v => v.SetPersons(people));
+            view.AssertWasCalled(v => v.Persons = people);
         }
     }
+
     [TestFixture]
-    public class when_ListPersonPresenter_is_told_to_get_all_person_and_service_throws_an_exception : ArrangeActAssert<IPresenter<IListPersonView>>
+    public class when_ListPersonPresenter_is_told_to_get_all_person_and_service_throws_an_exception :
+        ArrangeActAssert<IPresenter<IListPersonView>>
     {
         private IPersonService service;
         private IListPersonView view;
@@ -65,7 +69,7 @@ namespace Timesheet.Domain.Test.Presentation
 
         public override IPresenter<IListPersonView> CreateSUT()
         {
-            return new ListPersonPresenter(view, service);
+            return new ListPersonPresenter(service) {View = view};
         }
 
         public override void Act()
@@ -76,7 +80,7 @@ namespace Timesheet.Domain.Test.Presentation
         [Test]
         public void Should_return_an_empty_list()
         {
-            view.AssertWasCalled(v => v.SetPersons(Arg<IEnumerable<Person>>.Matches(HasNoElements())));
+            view.AssertWasCalled(v => v.Persons = Arg<IEnumerable<Person>>.Matches(HasNoElements()));
         }
 
         private Expression<Predicate<IEnumerable<Person>>> HasNoElements()

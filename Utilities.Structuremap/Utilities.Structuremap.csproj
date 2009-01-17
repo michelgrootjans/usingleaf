@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5F62AE4D-9638-4EDE-A29E-C50830C1E3E9}</ProjectGuid>
+    <ProjectGuid>{1BBA9104-F1D6-424F-8003-85103035EEF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utilities</RootNamespace>
-    <AssemblyName>Utilities</AssemblyName>
+    <RootNamespace>Utilities.Structuremap</RootNamespace>
+    <AssemblyName>Utilities.Structuremap</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap, Version=2.5.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\structuremap\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,17 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Containers\Container.cs" />
-    <Compile Include="Containers\DictionaryContainer.cs" />
-    <Compile Include="Containers\IContainer.cs" />
-    <Compile Include="Containers\UnsatisfiedDependencyException.cs" />
-    <Compile Include="Extensions\ObjectExtensions.cs" />
-    <Compile Include="Presentation\GetPresenter.cs" />
-    <Compile Include="Presentation\IPresenter.cs" />
-    <Compile Include="Presentation\IPresenterFactory.cs" />
-    <Compile Include="Presentation\IView.cs" />
-    <Compile Include="Presentation\Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructuremapContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Utilities\Utilities.csproj">
+      <Project>{5F62AE4D-9638-4EDE-A29E-C50830C1E3E9}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

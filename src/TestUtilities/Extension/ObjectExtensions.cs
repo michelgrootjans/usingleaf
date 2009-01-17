@@ -8,5 +8,15 @@ namespace TestUtilities.Extension
         {
             Assert.IsNotNull(subject);
         }
+
+        public static void ShouldBeOfType<expected>(this object actual)
+        {
+            Assert.IsInstanceOfType(typeof(expected), actual);
+        }
+
+        public static void ShouldBeSameAs(this object expected, object actual)
+        {
+            Assert.AreSame(expected, actual);
+        }
     }
 }

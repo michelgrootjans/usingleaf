@@ -13,7 +13,9 @@ namespace Timesheet.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            ApplicationStartup.Run();
+
+            Application.Run(new ListPersonView());
         }
     }
 }
