@@ -25,7 +25,7 @@ namespace Timesheet.Domain.Presentation
             {
                 View.Persons = service.GetAllPersons();
             }
-            catch
+            catch(Exception exc)
             {
                 View.Persons = new List<Person>();
             }
