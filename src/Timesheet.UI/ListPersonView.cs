@@ -14,7 +14,7 @@ namespace Timesheet.UI
         public ListPersonView()
         {
             InitializeComponent();
-            GetPresenter.For(this as IListPersonView);
+            GetPresenter.For<IListPersonView>(this);
         }
 
         public IEnumerable<Person> Persons
