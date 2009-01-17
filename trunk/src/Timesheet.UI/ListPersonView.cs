@@ -14,7 +14,6 @@ namespace Timesheet.UI
         public ListPersonView()
         {
             InitializeComponent();
-            GetPresenter.For<IListPersonView>(this);
         }
 
         public IEnumerable<Person> Persons
@@ -28,6 +27,11 @@ namespace Timesheet.UI
             {
                 GiveMeAllPersons(this, EventArgs.Empty);
             }
+        }
+
+        private void personList_DoubleClick(object sender, EventArgs e)
+        {
+            var personView  = new PersonView();
         }
     }
 }

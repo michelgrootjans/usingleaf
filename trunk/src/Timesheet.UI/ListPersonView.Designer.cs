@@ -46,6 +46,7 @@
             this.personList.ReadOnly = true;
             this.personList.Size = new System.Drawing.Size(877, 651);
             this.personList.TabIndex = 0;
+            this.personList.DoubleClick += new System.EventHandler(this.personList_DoubleClick);
             // 
             // btnGetAllPeople
             // 
