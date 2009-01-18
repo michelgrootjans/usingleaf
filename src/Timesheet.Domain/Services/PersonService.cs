@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Leaf;
 using Leaf.BL;
 using Timesheet.BL;
 using Timesheet.Domain.Presentation;
@@ -17,7 +16,7 @@ namespace Timesheet.Domain.Services
 
         public void Save(Person person)
         {
-            //This doesn't work??
+            //Shouldn't this work?
             person.Save();
         }
     }

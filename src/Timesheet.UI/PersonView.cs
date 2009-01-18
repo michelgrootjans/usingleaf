@@ -25,6 +25,8 @@ namespace Timesheet.UI
         private void ShowPerson()
         {
             Text = Person.Name;
+
+            //Vervang door databinding...
             txtLastName.Text = Person.LastName;
             txtFirstName.Text = Person.FirstName;
         }
