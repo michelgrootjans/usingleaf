@@ -19,12 +19,16 @@ namespace Timesheet.UI
 
         public IEnumerable<Person> Persons
         {
-            set { personList.DataSource = value; }
+            set
+            {
+                personList.DataSource = value;
+                //of hoe databinding ook weer gaat...
+            }
         }
 
         public Person GetSelectedPerson()
         {
-            //TODO: there must be a better way to get the selected row
+            //is dit hoe je de person moet terugvinden?
             return personList.SelectedRows[0].DataBoundItem as Person;
         }
 
