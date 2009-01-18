@@ -27,7 +27,7 @@ namespace Timesheet.UI
             return personList.SelectedRows[0].DataBoundItem as Person;
         }
 
-        private void btnGetAllPeople_Click(object sender, EventArgs e)
+        private void ListPersonView_Load(object sender, EventArgs e)
         {
             if (GiveMeAllPersons != null)
                 GiveMeAllPersons(this, EventArgs.Empty);
