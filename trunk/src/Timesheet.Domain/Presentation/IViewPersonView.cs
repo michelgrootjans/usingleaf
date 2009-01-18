@@ -6,9 +6,9 @@ namespace Timesheet.Domain.Presentation
 {
     public interface IViewPersonView : IView
     {
-        event EventHandler GetPerson;
+        event EventHandler SavePerson;
 
         void SetPerson(Person person);
-        Person Person { get; }
+        Person Person { get; set; }
     }
 }

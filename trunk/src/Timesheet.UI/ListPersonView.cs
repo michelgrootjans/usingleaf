@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Timesheet.BL;
 using Timesheet.Domain.Presentation;
+using Utilities.Extensions;
 
 namespace Timesheet.UI
 {
@@ -29,13 +30,13 @@ namespace Timesheet.UI
 
         private void ListPersonView_Load(object sender, EventArgs e)
         {
-            if (GiveMeAllPersons != null)
+            if (GiveMeAllPersons.IsNotNull())
                 GiveMeAllPersons(this, EventArgs.Empty);
         }
 
         private void personList_DoubleClick(object sender, EventArgs e)
         {
-            if (ShowSelectedPerson != null)
+            if (ShowSelectedPerson.IsNotNull())
                 ShowSelectedPerson(this, EventArgs.Empty);
         }
     }

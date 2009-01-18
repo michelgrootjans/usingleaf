@@ -14,5 +14,14 @@ namespace Timesheet.Domain.Services
             collection.Load();
             return collection;
         }
+
+        public void Save(Person person)
+        {
+            //Is er geen betere manier om een entity te saven?
+            var collection = new PersonCollection(CloudType.Separate);
+            collection.Load(person.GetPrimaryKey());
+            collection.Duplicate(person);
+            collection.Save();
+        }
     }
 }

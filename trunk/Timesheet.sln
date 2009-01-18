@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "src\Utilities\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUtilities", "src\TestUtilities\TestUtilities.csproj", "{629423F0-D2D1-4A9F-8A9B-38515DE63C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities.Structuremap", "Utilities.Structuremap\Utilities.Structuremap.csproj", "{1BBA9104-F1D6-424F-8003-85103035EEF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities.Structuremap", "src\Utilities.Structuremap\Utilities.Structuremap.csproj", "{1BBA9104-F1D6-424F-8003-85103035EEF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

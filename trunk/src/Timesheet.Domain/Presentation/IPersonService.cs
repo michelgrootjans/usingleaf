@@ -6,5 +6,6 @@ namespace Timesheet.Domain.Presentation
     public interface IPersonService
     {
         IEnumerable<Person> GetAllPersons();
+        void Save(Person person);
     }
 }

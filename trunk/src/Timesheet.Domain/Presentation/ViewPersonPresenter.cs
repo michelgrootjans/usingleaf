@@ -14,16 +14,17 @@ namespace Timesheet.Domain.Presentation
 
         protected override void WireUpView()
         {
-            View.GetPerson += GetPerson;
+            View.SavePerson += SavePerson;
         }
 
-        private void GetPerson(object sender, EventArgs e)
+        private void SavePerson(object sender, EventArgs e)
         {
+            service.Save(View.Person);
         }
 
         public override void Dispose()
         {
-            View.GetPerson -= GetPerson;
+            View.SavePerson -= SavePerson;
         }
     }
 }
