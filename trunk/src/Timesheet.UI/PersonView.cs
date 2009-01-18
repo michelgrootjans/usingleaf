@@ -23,7 +23,8 @@ namespace Timesheet.UI
 
         private void ShowPerson()
         {
-            txtName.Text = Person.Name;
+            Text = Person.Name;
+            txtLastName.Text = Person.LastName;
             txtFirstName.Text = Person.FirstName;
         }
     }

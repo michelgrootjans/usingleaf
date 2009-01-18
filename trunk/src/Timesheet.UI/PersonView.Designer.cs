@@ -31,16 +31,16 @@ namespace Timesheet.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtName
+            // txtLastName
             // 
-            this.txtName.Location = new System.Drawing.Point(96, 24);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 0;
+            this.txtLastName.Location = new System.Drawing.Point(96, 24);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.TabIndex = 0;
             // 
             // txtFirstName
             // 
@@ -55,7 +55,7 @@ namespace Timesheet.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 240);
             this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtLastName);
             this.Name = "PersonView";
             this.Text = "PersonView";
             this.ResumeLayout(false);
@@ -65,7 +65,7 @@ namespace Timesheet.UI
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
     }
 }
