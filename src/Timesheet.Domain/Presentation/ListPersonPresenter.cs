@@ -37,6 +37,8 @@ namespace Timesheet.Domain.Presentation
         {
             var personView = Container.GetImplementationOf<IViewPersonView>();
             personView.SetPerson(View.GetSelectedPerson());
+            GetPresenter.For(personView);
+
             personView.Show();
         }
 
