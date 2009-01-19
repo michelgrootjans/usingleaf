@@ -17,6 +17,7 @@ namespace Timesheet.Domain.Services
         public void Save(Person person)
         {
             //Shouldn't this work?
+            person.EndEdit();
             person.Save();
         }
     }

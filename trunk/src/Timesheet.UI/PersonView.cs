@@ -27,14 +27,15 @@ namespace Timesheet.UI
             Text = Person.Name;
 
             //Vervang door databinding...
-            txtLastName.Text = Person.LastName;
-            txtFirstName.Text = Person.FirstName;
+            txtLastName.DataBindings.Add("Text", Person, "LastName");
+            txtFirstName.DataBindings.Add("Text", Person, "FirstName");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if(SavePerson.IsNotNull())
                 SavePerson(this, EventArgs.Empty);
-        }
+            Close();
+}
     }
 }
