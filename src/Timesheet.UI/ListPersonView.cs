@@ -12,7 +12,7 @@ namespace Timesheet.UI
         public event EventHandler GiveMeAllPersons;
         public event EventHandler ShowSelectedPerson;
 
-        public ListPersonView()
+        public ListPersonView(IViewPersonPresenter presenter)
         {
             InitializeComponent();
         }
