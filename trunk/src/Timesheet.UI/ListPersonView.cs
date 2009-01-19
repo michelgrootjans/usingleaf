@@ -22,7 +22,6 @@ namespace Timesheet.UI
             set
             {
                 personList.DataSource = value;
-                //of hoe databinding ook weer gaat...
             }
         }
 
@@ -34,14 +33,13 @@ namespace Timesheet.UI
 
         private void ListPersonView_Load(object sender, EventArgs e)
         {
-            if (GiveMeAllPersons.IsNotNull())
-                GiveMeAllPersons(this, EventArgs.Empty);
+            GiveMeAllPersons.Raise(this, EventArgs.Empty);
         }
 
         private void personList_DoubleClick(object sender, EventArgs e)
         {
-            if (ShowSelectedPerson.IsNotNull())
-                ShowSelectedPerson(this, EventArgs.Empty);
+            ShowSelectedPerson.Raise(this, EventArgs.Empty);
         }
     }
+
 }
